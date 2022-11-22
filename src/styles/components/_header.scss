@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  background-color: $primary-color;
+  padding: 12px 56px;
+  @include flex(row, space-between, center, 0);
+  position: sticky;
+  top: 0;
+
+  &__menu {
+    @include flex(row, space-between, center, 24px);
+  }
+
+  &__menu-item {
+    color: white;
+    text-decoration: none;
+    font-size: $text-base;
+    font-weight: 300;
+    padding: 16px;
+    box-sizing: content-box;
+    border-radius: 4px;
+    transition: all 150ms;
+
+    &:hover {
+      background-color: #4794b4;
+    }
+  }
+}

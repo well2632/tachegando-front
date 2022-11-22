@@ -1,0 +1,46 @@
+.order-card {
+  width: 90%;
+  @include flex(column, center, center, 24px);
+  padding-bottom: 16px;
+  border-bottom: 1px solid $light-gray;
+
+  &__status {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 4px;
+    @include flex(column, center, center, 0);
+
+    &.pending {
+      @include colors($yellow-text, $yellow-background);
+    }
+
+    &.delayed {
+      @include colors($red-text, $red-background);
+    }
+
+    &.doing {
+      @include colors($blue-text, $blue-background);
+    }
+  }
+
+  &__body {
+    width: 100%;
+    @include flex(row, space-between, center, 0);
+  }
+
+  &__info {
+    @include flex(column, flex-start, flex-start, 12px);
+  }
+
+  &__actions {
+    @include flex(row, space-between, center, 16px);
+  }
+
+  &__peopleName {
+    @include font-h5;
+  }
+
+  &__createdAt {
+    @include font-small;
+  }
+}

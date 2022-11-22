@@ -1,0 +1,30 @@
+@mixin flex($type, $justify-content, $align-items, $gap) {
+  display: flex;
+  flex-direction: $type;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin colors($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+}
+
+@mixin font-h4 {
+  font-size: $text-xl;
+  color: $black;
+  font-weight: 500;
+}
+
+@mixin font-h5 {
+  font-size: $text-lg;
+  color: $black;
+  font-weight: 500;
+}
+
+@mixin font-small {
+  font-size: $text-xs;
+  color: $gray;
+  font-weight: 400;
+}

@@ -1,0 +1,87 @@
+.order-details {
+  width: 80%;
+  height: 90%;
+  @include flex(column, space-between, center, 0);
+  padding: 32px 56px;
+  background-color: #fff;
+  border-radius: 4px;
+
+  &__header {
+    @include flex(row, space-between, center, 0);
+    padding-bottom: 24px;
+    border-bottom: 1px solid $light-gray;
+    width: 100%;
+  }
+
+  &__customer-name {
+    font-size: $text-xl;
+    color: $black;
+    font-weight: 500;
+  }
+
+  &__timer {
+    font-size: $text-xl;
+    color: $black;
+    font-weight: 500;
+  }
+
+  &__content {
+    @include flex(column, flex-start, flex-start, 24px);
+    border-radius: 4px;
+    border: 1px solid $light-gray;
+    padding: 24px;
+    margin-top: 24px;
+    width: 100%;
+    flex: 1;
+    overflow-y: scroll;
+  }
+
+  &__content-row {
+    width: 100%;
+    @include flex(row, space-between, center, 0);
+    padding: 16px 0;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  &__content-info {
+    @include flex(column, flex-start, flex-start, 8px);
+  }
+
+  &__product-timer {
+    color: $gray;
+  }
+
+  &__product-name-quantity {
+    font-size: $text-xl;
+    color: $black;
+  }
+
+  &__actions {
+    @include flex(row, space-between, center, 16px);
+  }
+
+  &__buttons {
+    width: 100%;
+    margin-top: 24px;
+    @include flex(column, center, center, 16px);
+  }
+
+  &__btn {
+    width: 100%;
+    @include flex(row, center, center, 8px);
+    padding: 16px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: $text-base;
+    color: white;
+    cursor: pointer;
+
+    &#confirm {
+      background-color: $green-color;
+    }
+
+    &#new {
+      background-color: $primary-color;
+    }
+  }
+}
