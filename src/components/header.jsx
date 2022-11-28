@@ -1,23 +1,30 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "./logo";
 
-function header() {
+function Header() {
+  const navigate = useNavigate();
+
+  async function handleLogout() {
+    localStorage.clear();
+    navigate("/");
+  }
+
   return (
     <div className="header">
       <div className="header__logo">
         <Logo />
       </div>
       <div className="header__menu">
-        <NavLink className="header__menu-item" to="/produtos">
-          Produtos
-        </NavLink>
-        <NavLink className="header__menu-item" to="/conta">
-          Conta
-        </NavLink>
+        {/* <NavLink className="header__menu-item" to="/conta">
+          Configurações
+        </NavLink> */}
+        <div className="header__menu-item" onClick={handleLogout}>
+          Sair
+        </div>
       </div>
     </div>
   );
 }
 
-export default header;
+export default Header;

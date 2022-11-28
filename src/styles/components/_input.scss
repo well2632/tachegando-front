@@ -1,0 +1,50 @@
+.input-container {
+  @include flex(column, flex-start, flex-start, 16px);
+  width: 100%;
+
+  input {
+    color: $black;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    padding: 16px 12px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}
+
+.text-area {
+  @include flex(column, flex-start, flex-start, 16px);
+  width: 100%;
+  flex: 1;
+
+  textarea {
+    color: $black;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    padding: 16px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}
+
+.input-error {
+  color: $red-text;
+}

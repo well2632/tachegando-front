@@ -24,10 +24,13 @@
 
   &.red {
     background-color: $red-text;
+    color: white;
   }
 
   &.green {
     background-color: $green-color;
+    color: white;
+
     &:hover {
       background-color: #6dc2d0;
     }

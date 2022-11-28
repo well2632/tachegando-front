@@ -7,5 +7,10 @@
 @import "./components/header";
 @import "./components/cards/orderCard";
 @import "./components/buttons/roundedButton";
+@import "./components/modal";
+@import "./components/containers/horizontalContainer";
+@import "./components/input";
+@import "./components/forms/createOrderForm";
 
 @import "./pages/home";
+@import "./pages/login.scss";

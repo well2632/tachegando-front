@@ -3,7 +3,7 @@ import RoundedButton from "../buttons/roundedButton";
 import MessageCircle from "../icons/messageCircle";
 import FileText from "../icons/filetext";
 
-function orderCard({ status, timeLimit, contactName, createdAt, id }) {
+function orderCard({ status, timeLimit, contactName, createdAt, id, selectOrder }) {
   const types = ["pending", "delayed", "doing"];
 
   const cardType = types.includes(status) ? status : types[0];
@@ -22,8 +22,7 @@ function orderCard({ status, timeLimit, contactName, createdAt, id }) {
           <span className="order-card__createdAt">Solicitado {createdAt}</span>
         </div>
         <div className="order-card__actions">
-          <RoundedButton content={<MessageCircle fill="none" />} />
-          <RoundedButton palette="blue" content={<FileText fill="none" />} />
+          <RoundedButton palette="blue" content={<FileText fill="none" />} onClick={() => selectOrder(id)} />
         </div>
       </div>
     </div>

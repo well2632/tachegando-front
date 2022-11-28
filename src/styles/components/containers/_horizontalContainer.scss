@@ -1,0 +1,4 @@
+.horizontal-container {
+  width: 100%;
+  @include flex(row, space-between, flex-start, 24px);
+}
